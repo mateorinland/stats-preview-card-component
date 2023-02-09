@@ -7,4 +7,4 @@ Using HTML5, CSS3 and SASS.
 * Flexbox and grid.
 * Mobile-first workflow.
 
-View here: https://stats-preview-card-component-kappa-fawn.vercel.app/
+View here: https://huddle-landing-page-with-single-introductory-section-xi-black.vercel.app/
