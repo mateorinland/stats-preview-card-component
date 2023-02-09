@@ -97,6 +97,7 @@ body {
 }
 .card .image-container {
   background-color: hsl(277deg, 64%, 61%);
+  max-height: 400px;
 }
 .card .image-container img {
   height: 100%;
@@ -104,6 +105,7 @@ body {
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  max-height: 400px;
   opacity: 0.7;
   mix-blend-mode: multiply;
 }
@@ -158,6 +160,12 @@ body {
   }
   .card .stats-preview {
     grid-row: 1;
+  }
+  .image-container {
+    max-height: none;
+  }
+  .image-container img {
+    max-height: none;
   }
   .text {
     padding: 0 1rem 0 4rem;

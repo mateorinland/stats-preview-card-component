@@ -31,11 +31,13 @@ body {
     display: grid;
     .image-container {
         background-color: $Soft_violet_accent;
+        max-height: 400px;
         img {
             height: 100%;
             width: 100%;
             max-width: 100%;
             object-fit: cover;
+            max-height: 400px;
             opacity: 0.7;
             mix-blend-mode:multiply;
         }
@@ -92,6 +94,12 @@ body {
         grid-template-columns: 1fr 1fr;
         .stats-preview {
             grid-row: 1
+        }
+    }
+    .image-container {
+        max-height: none;
+        img {
+            max-height: none;
         }
     }
     .text {
