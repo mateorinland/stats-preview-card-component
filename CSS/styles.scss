@@ -10,39 +10,35 @@ $Slightly_transparent_white_stat_headings: hsla(0, 0%, 100%, 0.6);
 html {
     font-family: 'Inter', sans-serif;
     text-align: center;
-    /**/
 }
 
 body {
     background-color: $Very_dark_blue_main_background;
-    font-size: 15px;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 5.5rem 1rem;
 }
 
 .card {
     background-color: $Dark_desaturated_blue_card_background;
     border-radius: 5px;
     overflow: hidden;
-    max-width: 90%;
+    max-width: 20rem;
     display: grid;
     .image-container {
         background-color: $Soft_violet_accent;
-        max-height: 400px;
+        height: 100%;
         img {
             height: 100%;
             width: 100%;
-            max-width: 100%;
             object-fit: cover;
             max-height: 400px;
             opacity: 0.7;
             mix-blend-mode:multiply;
-        }
-        .image-desktop {
-            display: none;
+            object-position: top center;
         }
     }
     .stats-preview {
@@ -50,35 +46,38 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        .text {
-            border-left: 1em solid transparent;
-            border-right: 1em solid transparent;
-        }
-        h1 {
+        padding: 1.5rem 1rem;
+        .title {
             font-size: 1.8rem;
             color: $White_main_heading_stats;
-            padding: 2rem 0 1rem;
+            margin: 1rem 0;
+            line-height: 1.2;
         }
-        span {
+        .title_emphasis {
             color: $Soft_violet_accent;
         }
-        small {
-            font-size: 0.9rem;
+        .text {
             color: $Slightly_transparent_white_main_paragraph;
             font-weight: 400;
+            line-height: 2;
         }
-        p {
+        .list {
+            list-style: none;
             display: flex;
             flex-direction: column;
             padding: 1rem 0;
         }
-        strong {
+        .stats {
+            margin: 1rem;
+        }
+        .number_bold {
             font-size: 1.5rem;
             color: $White_main_heading_stats;
-            
+            display: block;
         }
-        em {
-            font-size: 0.7rem;
+        .list_item_emphasis {
+            font-family: 'Lexend Deca', sans-serif;
+            font-size: 0.9rem;
             text-transform: uppercase;
             color: $Slightly_transparent_white_main_paragraph;
             letter-spacing: 1px;
@@ -88,45 +87,39 @@ body {
     }
 }
 
-@media only screen and (min-width: 1024px) {
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: $Slightly_transparent_white_main_paragraph;
+    .attribution-link {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+@media only screen and (min-width: 62.5rem) { //1000px
     html {
         text-align: left;
     }
     .card {
-        max-width: 70%;
+        max-width: 70rem;
         grid-template-columns: 1fr 1fr;
         .stats-preview {
             grid-row: 1
         }
     }
-    .image-container {
-        max-height: none;
-        .image-desktop {
-            display: block !important;
-            max-height: none;
-        }
-        .image-mobile {
-            display: none;
-        }
-    }
     .text {
         padding: 0 1rem 0 4rem;
     }
+    .list {
+        flex-direction: row !important;
+    }
     .stats {
         display: flex;
-        gap: 3.5rem;
+        flex-direction: column;
+        gap: 0.3rem;
         padding: 2rem 0 0;
     }
-    p {
-        display: default;
-    }
-}
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-    color: $Slightly_transparent_white_main_paragraph;
-    a {
-        color: hsl(228, 45%, 44%);
+    .number_bold {
+        display: none;
     }
 }

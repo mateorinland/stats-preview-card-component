@@ -13,26 +13,40 @@
 <body>
   <main class="card">
     <div class="image-container">
-      <img class="image-mobile" src="./images/image-header-mobile.jpg" alt="Two women working with laptops in an office while a third woman smiles and sits by their side looking off-camera."/>
-      <img class="image-desktop" src="./images/image-header-desktop.jpg" alt="Two women working with laptops in an office while a third woman smiles and sits by their side looking off-camera."/>
+      <picture>
+        <source
+          srcset="./images/image-header-desktop.jpg"
+          media="(min-width: 62.5rem)"
+          width="540" height="446"
+        />
+        <img
+          src="./images/image-header-mobile.jpg"
+          alt="Two women working with laptops in an office while a third woman smiles and sits by their side looking off-camera."
+          loading="eager"
+          width="654" height="480"
+        />
+      </picture>
     </div>
-    <section class="stats-preview">
-      <div class="text">
-        <h1>Get <span>insights</span> that help your business grow.</h1>
-
-        <small>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-        experience, and overall efficiency.</small>
-      </div>
-      <div class="stats">
-        <p><strong>10k+</strong> <em>companies</em></p>
-        <p><strong>314</strong> <em>templates</em></p>
-        <p><strong>12M+</strong> <em>queries</em></p>
-      </div>
-    </section>
+    <div class="stats-preview">
+      <h1 class="title">Get <span class="title_emphasis">insights</span> that help your business grow.</h1>
+      <p class="text">Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+      experience, and overall efficiency.</p>
+      <ul class="list" role="list">
+        <li class="stats" role="listitem">
+          <strong class="number_bold">10k+</strong> <span class="list_item_emphasis">companies</span>
+        </li>
+        <li class="stats" role="listitem">
+          <strong class="number_bold">314</strong> <span class="list_item_emphasis">templates</span>
+        </li>
+        <li class="stats" role="listitem">
+          <strong class="number_bold">12M+</strong> <span class="list_item_emphasis">queries</span>
+        </li>
+      </ul>
+    </div>
   </main>
   <footer class="attribution">
-    Coded by <a href="https://www.linkedin.com/in/mateo-rinland-9b1a93bb/">Mateo Rinland</a>.
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="attribution-link" href="https://www.linkedin.com/in/mateo-rinland-9b1a93bb/">Mateo Rinland</a>.
+    Challenge by <a class="attribution-link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
   </footer>
 </body>
 </html>
