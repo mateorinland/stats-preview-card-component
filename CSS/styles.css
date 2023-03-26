@@ -103,7 +103,6 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  max-height: 400px;
   opacity: 0.7;
   mix-blend-mode: multiply;
   -o-object-position: top center;
@@ -173,12 +172,18 @@ body {
   }
   .card .stats-preview {
     grid-row: 1;
+    align-items: baseline;
+  }
+  .title {
+    padding: 0 1rem 0 4rem;
+    font-size: 2rem !important;
   }
   .text {
     padding: 0 1rem 0 4rem;
   }
   .list {
     flex-direction: row !important;
+    padding: 1rem 3rem !important;
   }
   .stats {
     display: flex;
