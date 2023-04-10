@@ -1,0 +1,239 @@
+/*---------------------------
+ ** CSS Reset
+-----------------------------*/
+/* See https://piccalil.li/blog/a-modern-css-reset/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  background-color: hsl(233, 47%, 7%);
+  font-size: 0.938rem;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5.5rem 1rem;
+}
+
+@media screen and (min-width: 62.5rem) {
+  body {
+    text-align: left;
+  }
+}
+/* MAIN */
+.card {
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 0.333rem;
+  overflow: hidden;
+  max-width: 20rem;
+  display: grid;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .card {
+    max-width: 70rem;
+    grid-template-columns: 1fr auto;
+  }
+}
+.image-container {
+  background-color: hsl(277, 64%, 61%);
+  width: 100%;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .image-container {
+    max-width: 33rem;
+  }
+}
+.image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.7;
+  mix-blend-mode: multiply;
+}
+
+.stats-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .stats-preview {
+    grid-row: 1;
+    align-items: baseline;
+    padding: 2rem 4rem 2rem 4.5rem;
+  }
+}
+.title {
+  font-size: 1.8rem;
+  color: hsl(0, 0%, 100%);
+  margin: 1rem 0;
+  line-height: 1.2;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .title {
+    font-size: 2.2rem;
+    margin: 1rem;
+  }
+}
+.title-in-color {
+  color: hsl(277, 64%, 61%);
+}
+
+.info {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-weight: 400;
+  line-height: 2;
+  padding: 0 1rem;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .info {
+    font-size: 0.9rem;
+    padding: 0 3rem 0 0;
+    margin: 0 0 2rem 0;
+  }
+}
+.numbers-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .numbers-list {
+    flex-direction: row;
+  }
+}
+.list-item {
+  margin: 1rem;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin: 0;
+    padding: 2rem 0 0;
+  }
+}
+.item-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+
+@media screen and (min-width: 62.5rem) {
+  .item-number {
+    font-size: 1.5rem;
+  }
+}
+.item-word {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #888799;
+  letter-spacing: 0.067rem;
+  font-style: normal;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .item-word {
+    font-size: 0.8rem;
+  }
+}
+/* CONTENTINFO */
+.attribution {
+  font-size: 0.733rem;
+  text-align: center;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.attribution-link {
+  color: #5875ec;
+}/*# sourceMappingURL=styles.css.map */
